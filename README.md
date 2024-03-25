@@ -30,8 +30,10 @@ pie
     "Tooling" : 14
 ```
 # Resources in Details 
+Following a section-wise approach for the exam helps. You can start from the top and go to the bottom to cover the syllabus: 
 
 ## GitOps Terminology
+
 ### Continuous
 ### Declarative Description
 ### Desired State
@@ -43,18 +45,21 @@ pie
 ### Rollback
 
 ## GitOps Principles
+
 ### Declarative
 ### Versioned and Immutable
 ### Pulled Automatically
 ### Continuously Reconciled
 
 ## Related Practices
+
 ### Configuration as Code (CaC)
 ### Infrastructure as Code (IaC)
 ### DevOps and DevSecOps
 ### CI and CD
 
 ## GitOps Patterns
+
 ### Deployment and Release Patterns
 ### Progressive Delivery Patterns
 ### Pull vs. Event-driven
