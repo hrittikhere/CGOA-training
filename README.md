@@ -29,12 +29,49 @@ pie
     "GitOps Terminology" : 20
     "Tooling" : 14
 ```
-# Resources
+# Resources in Details 
+
+## GitOps Terminology
+### Continuous
+### Declarative Description
+### Desired State
+### State Drift
+### State Reconciliation
+### GitOps Managed Software System
+### State Store
+### Feedback Loop
+### Rollback
+
+## GitOps Principles
+### Declarative
+### Versioned and Immutable
+### Pulled Automatically
+### Continuously Reconciled
+
+## Related Practices
+### Configuration as Code (CaC)
+### Infrastructure as Code (IaC)
+### DevOps and DevSecOps
+### CI and CD
+
+## GitOps Patterns
+### Deployment and Release Patterns
+### Progressive Delivery Patterns
+### Pull vs. Event-driven
+### Architecture Patterns (in-cluster and external reconciler, state store management, etc.)
+
+## Tooling
+### Manifest Format and Packaging
+### State Store Systems (Git and alternatives)
+### Reconciliation Engines (ArgoCD, Flux, and alternatives)
+### Interoperability with Notifications, Observability, and Continuous Integration Tools
+
 
 
 # Study Tips
-
-
+- Play with the tools like ArgoCD a bit to understand them clearly
+- Focus on implementing and running a simple GitOps Application for Clarity
+- Learn a bit of Architecture of the Tools as it helps you remember theory for longer
 
 # Exam Tips ( PSI ) 
 - Keep your desk tidy and run the System Check before the exams.
