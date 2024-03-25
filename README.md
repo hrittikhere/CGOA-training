@@ -34,11 +34,14 @@ pie
 
 # Study Tips
 
-# Exam Tips ( PSI ) 
 
+
+# Exam Tips ( PSI ) 
 - Keep your desk tidy and run the System Check before the exams.
-- Carry an ID that has not expired.
-- The exam can be started 30 minutes prior to your scheduled time, which is a good opportunity to complete the security checks and begin the exam early.
+-  Carry an ID that has not expired.
+- The exam can be started 30 minutes prior to your scheduled time, which is an excellent opportunity to complete the security checks and begin the exam early. It helps me to calm down and not rush during the exam :) 
+- Delete the PSI Browser from your system to save time for your next exam. 
+- Mark the questions `To Review` if you need more clarification and want to get back later. You have a dashboard with all the questions collectively listed, which helps you to get back to easily
   
 # Certificate and a Credly Badge
 Once you PASS it, you get the certificate mailed to you ⬇️
