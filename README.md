@@ -29,8 +29,17 @@ pie
     "GitOps Terminology" : 20
     "Tooling" : 14
 ```
+# Resources
 
 
+# Study Tips
+
+# Exam Tips ( PSI ) 
+
+- Keep your desk tidy and run the System Check before the exams.
+- Carry an ID that has not expired.
+- The exam can be started 30 minutes prior to your scheduled time, which is a good opportunity to complete the security checks and begin the exam early.
+  
 # Certificate and a Credly Badge
 Once you PASS it, you get the certificate mailed to you ⬇️
 
