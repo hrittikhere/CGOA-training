@@ -35,33 +35,42 @@ Following a section-wise approach for the exam helps. You can start from the top
 ## GitOps Terminology
 
 ### Continuous
-- Continuously and not instantaneously Reconciled
+- **Description**: The reconciliation process is continuous and ongoing, rather than happening instantaneously.
+- **Why it Matters**: Continuous reconciliation ensures that your system remains in the desired state consistently, even as changes occur over time.
 
 ### Declarative Description
-- Defining the what and not how on the Cluster State
+- **Definition**: Defines what the desired state of the cluster should be, without specifying the exact steps or procedures for achieving that state.
+- **Why it Matters**: By focusing on the desired outcome rather than implementation details, declarative descriptions provide clarity and flexibility in managing system configurations.
 
 ### Desired State
-- Your Final State
-  
+- **Description**: The final configuration or state that you want your system to achieve.
+- **Why it Matters**: Understanding and defining the desired state is crucial for ensuring that your system operates as intended.
+
 ### State Drift
-- Drift between the desired State and the current state
+- **Description**: Refers to the inconsistency or variance between the desired state and the actual current state of the system.
+- **Why it Matters**: Identifying and addressing state drift helps maintain system reliability and consistency.
 
 ### State Reconciliation
-- Removing the Drift to match the states
+- **Description**: The process of aligning the actual system state with the desired state, effectively eliminating any drift.
+- **Why it Matters**: Reconciliation ensures that your system remains consistent and operational according to the defined configuration.
 
 ### GitOps Managed Software System
-- Software that's managed using [GitOps Principles](https://github.com/open-gitops/documents/blob/main/PRINCIPLES.md)
-  
+- **Definition**: Software systems that are managed according to GitOps principles.
+- **Why it Matters**: Leveraging GitOps principles ensures reliability, scalability, and consistency in managing software deployments and configurations.
+
 ### State Store
-- Single Source of Truth for your Cluster. State here is created by Manfiest
-  
+- **Description**: The centralized repository that serves as the single source of truth for your cluster's configuration and desired state.
+- **Why it Matters**: A centralized state store simplifies management and ensures consistency across environments.
+
 ### Feedback Loop
-- Why is the feedback loop important before Reconciliation
+- **Description**: The process of gathering and incorporating feedback from various sources before executing the reconciliation process.
+- **Why it Matters**: Incorporating feedback helps identify potential issues or conflicts and ensures smoother reconciliation processes.
 
 ### Rollback
-- git revert
-- Rolling back automatically to previous state in case of failure
-- How to do that in tools like ArgoCD 
+- **Methods**:
+  - `git revert`: Using Git's revert functionality to undo changes made to the configuration.
+  - Automatic rollback: Tools like ArgoCD can automatically revert to a previous known state in case of failures.
+- **Why it Matters**: Rollback mechanisms provide a safety net, allowing you to quickly recover from errors or failures during the reconciliation process.
 
 
 ## GitOps Principles ( Inspired From [GitOps Principles](https://github.com/open-gitops/documents/blob/main/PRINCIPLES.md) )
