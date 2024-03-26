@@ -64,12 +64,24 @@ Following a section-wise approach for the exam helps. You can start from the top
 - How to do that in tools like ArgoCD 
 
 
-## GitOps Principles
-The [Charter](https://github.com/open-gitops/documents/blob/main/PRINCIPLES.md) has all the Principles defined.
+## GitOps Principles ( Inspired From [GitOps Principles](https://github.com/open-gitops/documents/blob/main/PRINCIPLES.md) )
+
 ### Declarative
+- **Description**: Your system's configuration and desired state should be clearly expressed in a declarative manner.
+- **Why it Matters**: This makes it easier to understand and manage what your system should look like without needing to know the intricacies of how to achieve that state.
+
 ### Versioned and Immutable
+- **Description**: Your system's desired state should be stored in a way that ensures it remains unchanged (immutable) and maintains a complete history of changes (versioned).
+- **Why it Matters**: By preserving a history of changes, you can track and understand the evolution of your system over time, while immutability ensures consistency and reliability.
+
 ### Pulled Automatically
+- **Description**: Agents or tools automatically retrieve and apply the desired state from a specified source (usually a Git repository).
+- **Why it Matters**: Automation simplifies the process of updating and maintaining your system, reducing the risk of human error and ensuring consistency across environments.
+
 ### Continuously Reconciled
+- **Description**: Agents or tools constantly monitor the actual state of the system and compare it against the desired state. Any deviations are automatically corrected.
+- **Why it Matters**: This ensures that your system remains in the desired state at all times, even as changes occur, leading to increased reliability and stability.
+
 
 ## Related Practices
 
@@ -128,6 +140,11 @@ The [Charter](https://github.com/open-gitops/documents/blob/main/PRINCIPLES.md) 
 - Feedback loop in Reconciliation approved by notification
 - [DORA](https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance) Metrics
 
+# Extra Resources:
+- [GitOps Glossary](https://github.com/open-gitops/documents/blob/main/GLOSSARY.md#software-system)
+- [Introduction to GitOps (LFS169)](https://training.linuxfoundation.org/training/introduction-to-gitops-lfs169/)
+- [Learn Argo CD](https://codefresh.io/learn/argo-cd/)
+- 
 
 # Study Tips
 - Play with the tools like ArgoCD a bit to understand them clearly
