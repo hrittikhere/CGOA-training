@@ -95,41 +95,43 @@ Following a section-wise approach for the exam helps. You can start from the top
 ## Related Practices
 
 ### Configuration as Code (CaC)
-- Ansible what's it
-- CaC in DevOps Pipeline
-### Infrastructure as Code (IaC)
-- Terraform/OpenTofu what they're
-- IaC in a DevOps Pipeline
-- State locking
-- IaC vs CaC
-### DevOps and DevSecOps
-- How DevSecOps is implemented in GitOps ( Security Policies ) 
-- DevSecOps and its importance
-### CI and CD
-- CD vs GitOps ( GitOps has Reconciliation with a state store )
-- CI in GitOps Process ( CI comes before GitOps, which is a delivery pattern )
+- **Ansible**: Ansible is a configuration management tool that automates software provisioning, configuration management, and application deployment.
+- **CaC in DevOps Pipeline**: Configuration as Code is integral to DevOps pipelines as it allows for consistent and repeatable infrastructure and application configurations across different environments.
 
+### Infrastructure as Code (IaC)
+- **Terraform/OpenTofu**: Terraform and OpenTofu are infrastructure as code (IaC) tools used to provision and manage infrastructure resources.
+- **IaC in a DevOps Pipeline**: Infrastructure as Code is a key practice in DevOps pipelines as it enables infrastructure to be versioned, automated, and treated as code, facilitating collaboration and consistency.
+- **State locking**: State locking ensures that only one process or user can modify the infrastructure state at a time, preventing conflicts and ensuring consistency.
+- **IaC vs CaC**: While both practices involve managing infrastructure through code, Infrastructure as Code focuses on provisioning and managing infrastructure resources, while Configuration as Code focuses on application and configuration management.
+
+### DevOps and DevSecOps
+- **How DevSecOps is implemented in GitOps (Security Policies)**: DevSecOps integrates security practices into the DevOps process, including security policies as code, vulnerability scanning, and automated compliance checks, ensuring security is built into the software delivery lifecycle.
+- **DevSecOps and its importance**: DevSecOps emphasizes collaboration between development, operations, and security teams to integrate security into every stage of the software development lifecycle, reducing risk and accelerating delivery.
+
+### CI and CD
+- **CD vs GitOps (GitOps has Reconciliation with a state store)**: Continuous Delivery (CD) focuses on automating the process of delivering software to production, while GitOps extends this by using Git as the single source of truth for declarative infrastructure and application configuration, with automated reconciliation ensuring desired state.
+- **CI in GitOps Process (CI comes before GitOps, which is a delivery pattern)**: Continuous Integration (CI) involves automatically building and testing code changes, which is typically done before GitOps processes take over for deployment and management, ensuring that changes are thoroughly tested before being applied to the production environment.
 ## GitOps Patterns
 
 ### Deployment and Release Patterns
-- Rolling Update
-- Recreate
-- Blue/Green
-  - how traffic is handled
-  - how resources are reconciled 
+- **Rolling Update**: Updates are applied gradually across instances, ensuring minimal disruption to the application.
+- **Recreate**: Instances are replaced entirely with the new version, suitable for environments where state persistence is not a concern.
+- **Blue/Green**:
+  - **Traffic Handling**: In Blue/Green deployment, traffic is switched between two identical environments (blue and green), with one serving live traffic while the other is updated.
+  - **Resource Reconciliation**: Resources are managed in separate environments, and reconciliation involves switching traffic and updating resources accordingly.
 
 ### Progressive Delivery Patterns
-- Goals of the Model
-- Canary
+- **Goals of the Model**: Progressive delivery aims to reduce risk and improve feedback loops by gradually exposing changes to a subset of users.
+- **Canary**: Canary releases involve rolling out changes to a small subset of users or servers before making them available to the wider audience.
 
 ### Pull vs. Event-driven
-- Difference b/w Pull and Event Driven
-- How both of them relate to each other and pattern similarity 
+- **Difference between Pull and Event-Driven**: Pull-based GitOps involves agents periodically pulling desired state from a Git repository, while event-driven GitOps responds to changes triggered by events such as Git commits or CI/CD pipeline runs.
+- **Relationship and Pattern Similarity**: Both pull and event-driven approaches aim to ensure that the actual state matches the desired state, albeit through different mechanisms, and can be complementary depending on the use case and infrastructure requirements.
 
 ### Architecture Patterns (in-cluster and external reconciler, state store management, etc.)
-- Reconciler Types: in-cluster and external reconciler
-- State Store Management: Why it's required/What it solves
-- Secret Management in GitOps: [Sealed Secrets](https://loft.sh/blog/gitops-kubernetes-managing-kubernetes-secrets/), Vault and others
+- **Reconciler Types**: In-cluster reconcilers run within the Kubernetes cluster and manage resources directly, while external reconcilers operate outside the cluster and interact with Kubernetes API to reconcile state.
+- **State Store Management**: State store management is crucial in GitOps to store and version control the desired state of the system, ensuring consistency and traceability.
+- **Secret Management in GitOps**: Tools like [Sealed Secrets](https://loft.sh/blog/gitops-kubernetes-managing-kubernetes-secrets/), Vault, and others are used to manage sensitive information such as Kubernetes secrets in GitOps workflows, ensuring secure storage and distribution.
 
 ## Tooling
 
@@ -139,21 +141,25 @@ Following a section-wise approach for the exam helps. You can start from the top
 - Using normal Kubernetes manifest for Packaging 
 
 ### State Store Systems (Git and alternatives)
-- Storage Buckets, Git
+- **Storage Buckets**: Storage buckets, such as those provided by cloud providers like AWS S3 or Google Cloud Storage, can be used as a state store for GitOps. These buckets store versioned copies of Kubernetes manifests, providing a reliable source of truth for the desired state.
+- **Git**: Git is commonly used as a state store in GitOps workflows. Git repositories store declarative configuration files (manifests) in version control, enabling collaboration, change tracking, and auditability.
 
 ### Reconciliation Engines (ArgoCD, Flux, and alternatives)
-- ArgoCD, Argo Workflows, Flux, JenkinsX and how they operate ( Push/Pull Model + Internal/External Reconciliation)
-  
+- **ArgoCD**: ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes. It continuously monitors Git repositories for changes to application manifests and automatically deploys them to the cluster.
+- **Flux**: Flux is a Kubernetes operator that automates the deployment and lifecycle management of applications. It pulls manifests from Git repositories and reconciles them with the cluster's state.
+- **JenkinsX**: JenkinsX is an open-source tool for automated CI/CD with Kubernetes. While primarily known for CI/CD, JenkinsX also supports GitOps workflows, providing features for declarative deployments and managing Kubernetes configurations.
+- How they operate ( Push/Pull Model + Internal/External Reconciliation)
+
 ### Interoperability with Notifications, Observability, and Continuous Integration Tools
 - Prometheus and [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/) with how notification is handled to different messaging platforms
-- Feedback loop in Reconciliation approved by notification
+- A Feedback loop in Reconciliation approved by notification
 - [DORA](https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance) Metrics
-
+  
 # Extra Resources:
 - [GitOps Glossary](https://github.com/open-gitops/documents/blob/main/GLOSSARY.md#software-system)
 - [Introduction to GitOps (LFS169)](https://training.linuxfoundation.org/training/introduction-to-gitops-lfs169/)
 - [Learn Argo CD](https://codefresh.io/learn/argo-cd/)
-- 
+
 
 # Study Tips
 - Play with the tools like ArgoCD a bit to understand them clearly
